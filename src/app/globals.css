@@ -15,11 +15,14 @@ body{
 }
 
 .nav-background{
-  background-image: url('./public/YellowBackground.jpeg');
   object-fit: cover;
   background-repeat: no-repeat;
 }
 
+.checkered-background{
+  background-image: url('./public/YellowBackground.jpeg');
+
+}
 
 /* button styles from uiverse.io */
 
@@ -40,7 +43,7 @@ button {
   z-index: 1;
   font-size: 20px;
   border-radius: 6px;
-  font-weight: 500;
+  font-weight: 800;
   color: var(--color);
 }
 
@@ -72,4 +75,26 @@ button:hover:before {
 button:active:before {
   background: #3a0ca3;
   transition:  0s;
+}
+
+/* loader from cssloaders.com */
+
+/* HTML: <div class="loader"></div> */
+.loader {
+  width: 40vw;
+  height: 10vh;
+  aspect-ratio: 1;
+  background:
+    linear-gradient(#00AAFF 0 0),
+    linear-gradient(#FF00AA 0 0),
+    #00AAFF;
+  background-repeat: no-repeat;
+  animation: l1 1.5s infinite; 
+}
+@keyframes l1 {
+  0%   {background-size:100%    0,0    100%}
+  30%,
+  50%  {background-size:100%    0,100% 100%}
+  80%,
+  100% {background-size:100% 100%,100% 100%}
 }
